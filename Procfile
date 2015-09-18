@@ -1,1 +1,1 @@
-web: bash server.sh
+web: python -m SimpleHTTPServer ${PORT}

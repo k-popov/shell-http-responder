@@ -1,5 +1,7 @@
 #!/bin/bash
 
+PORT=${PORT:-8000}
+
 while true; do
     netcat -l -n -p $PORT -q 1 -v << ENDOFREPLY
 HTTP-Version: HTTP/1.0 200 OK

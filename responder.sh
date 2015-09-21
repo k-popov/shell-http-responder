@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # code from https://gist.github.com/alexey-sveshnikov/69d502aefd05a539c165
-while true; do
     r=read;
     e=echo;
     $r a b c;
@@ -29,4 +28,3 @@ while true; do
     else
         $e -e "$h 404 Not Found\n\n404\n";
     fi
-done

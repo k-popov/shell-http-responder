@@ -15,9 +15,12 @@ c="Content";
 echo "Checking for file '$f'" 1>&2
 if [ -z "$f" ];then (
     $e $o;
-    (for n in $(ls -1);do
+    (for n in *;do
+        echo "Processing file '$n' in for loop" 1>&2
         if [ -f "$n" ]; then
+            echo "Processing file '$n' in if block" 1>&2
             $e "<a href=\"/$n\">`ls -gh \"$n\"`</a><br>";
+            echo "Echoed '$n'" 1>&2
         fi;
     done);
 );

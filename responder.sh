@@ -16,7 +16,7 @@ if [ -z "$f" ];then (
     $e "$o$c-Type: text/html; charset=us-ascii"
     (for n in *;do
         if [ -f "$n" ]; then
-            $e "<a href=\"/$n\">`ls -gh \"$n\" | tr -d '\0' | tr -d '\n'`</a><br>";
+            $e "<a href=\"/$n\">`ls -1 \"$n\"`</a><br>";
         fi;
     done);
 );

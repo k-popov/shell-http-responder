@@ -13,15 +13,12 @@ h="HTTP/1.0";
 o="$h 200 OK\r\n";
 c="Content";
 if [ -z "$f" ];then (
-    $e "$o$c-Type: `file -ib \"content.html\"`\n$c-Length: `stat -c%s \"content.html\"`";
-    $e;
-    cat "content.html";
-#    $e "$o$c-Type: text/html; charset=us-ascii"
-#    (for n in *;do
-#        if [ -f "$n" ]; then
-#            $e "<a href=\"/$n\">`ls -1 \"$n\"`</a><br>";
-#        fi;
-#    done);
+    $e "$o$c-Type: text/html; charset=us-ascii"
+    (for n in *;do
+        if [ -f "$n" ]; then
+            $e "<a href=\"/$n\">`ls -1 \"$n\"`</a><br>";
+        fi;
+    done);
 );
 elif [ -f "$f" ];then
     $e "$o$c-Type: `file -ib \"$f\"`\n$c-Length: `stat -c%s \"$f\"`";

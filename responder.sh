@@ -3,8 +3,10 @@
 # code from https://gist.github.com/alexey-sveshnikov/69d502aefd05a539c165
     r=read;
     e=echo;
+    echo "a=$a b=$b c=$c" 1>&2
     $r a b c;
     z=$r;
+    echo "z=$z" 1>&2
     while [ ${#z} -gt 2 ]; do
         $r z;
     done;

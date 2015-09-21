@@ -12,7 +12,6 @@ f=`$e $b|sed 's/[^a-z0-9_.-]//gi'`;
 h="HTTP/1.0";
 o="$h 200 OK\r\n";
 c="Content";
-echo "Checking for file '$f'" 1>&2
 if [ -z "$f" ];then (
     $e $o;
     (for n in $(ls -1);do

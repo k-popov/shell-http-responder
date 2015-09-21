@@ -13,7 +13,7 @@ h="HTTP/1.0";
 o="$h 200 OK\r\n";
 c="Content";
 if [ -z "$f" ];then (
-    $e "$o$c-Type: text/html; charset=us-ascii"
+    $e $o;
     (for n in *;do
         if [ -f "$n" ]; then
             $e "<a href=\"/$n\">`ls -gh \"$n\"`</a><br>";
